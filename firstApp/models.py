@@ -1,6 +1,13 @@
 from django.db import models
-form 
+from django.contrib.auth.models import User
 
 # Create your models here.
 class userDetails(models.Model):
-    user = User
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+
+
+class recipe (models.Model):
+    title = models.CharField(max_length=100)
+    description = models.Model(models.TextField())
+
+    
